@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WlochynskiKamil.Views.ProductPage">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+            <ImageButton x:Name="back" Source="Images/back.png" Clicked="Back_Clicked" HeightRequest="30" Margin="10,0,70,0"></ImageButton>
+            <ImageButton Source="Images/logo.png" Clicked="Logo_Clicked" HeightRequest="30" Margin="0,0,70,0"></ImageButton>
+            <ImageButton Source="Images/cart.png" Clicked="Cart_Clicked" HeightRequest="30" Margin="0,0,70,0"></ImageButton>
+            <ImageButton Source="Images/logout.png" Clicked="Logout_Clicked" HeightRequest="30" Margin="0,0,10,0"></ImageButton>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+
+        <StackLayout>
+            <CarouselView x:Name="carouselView"  HeightRequest="680">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame 
+                           Margin="0"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand">
+                                <Image Source="{Binding}"
+                                   Aspect="Fill"
+                                   HeightRequest="520"
+                                   WidthRequest="400"
+                                   HorizontalOptions="Center" 
+                                       VerticalOptions="Center"/>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <StackLayout BackgroundColor="#1a1a1a" VerticalOptions="Start">
+               <Label Margin="0,20,0,10" x:Name="ProductName"
+                    
+                    TextColor="White"
+                    FontAttributes="Italic"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"
+                    MaxLines="5"
+                    LineBreakMode="TailTruncation" />
+                <Label
+                    Margin="0,0,0,10"  x:Name="ProductPrice"
+                    TextColor="DarkRed"
+                    FontAttributes="Bold"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"
+                    MaxLines="5"
+                    LineBreakMode="TailTruncation" />
+                <Picker VerticalOptions="Center" HorizontalOptions="Center" TitleColor="White" TextColor="White" BackgroundColor="#1a1a1a" WidthRequest="100" Title="Wybierz rozmiar" x:Name="sizePicker"></Picker>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Margin="0,10,0,25" Grid.Column="0" Text="Dodaj do koszyka" FontAttributes="Bold" TextColor="White"></Label>
+                    <ImageButton x:Name="addCartButton" Margin="0,0,0,25" HeightRequest="35" Source="Images/cart.png" Grid.Column="1"></ImageButton>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

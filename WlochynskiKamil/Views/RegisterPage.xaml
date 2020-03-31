@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WlochynskiKamil.Views.RegisterPage"
+             BackgroundImage="Images/mainPage.jpg">
+
+    
+    <Grid x:Name="grid" HorizontalOptions="Center"
+      VerticalOptions="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackLayout HorizontalOptions="Center" x:Name="loginStackLayout" Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+            <Label Text="LOGOWANIE" x:Name="loginClickLabel" TextColor="White" VerticalTextAlignment="Center" FontSize="Small" FontAttributes="Bold"  Padding="15,8,15,8" Margin="-3" ></Label>
+            <Label Text="REJESTRACJA" x:Name="registerClickLabel" TextColor="White" VerticalTextAlignment="Center" HorizontalOptions="Start" FontSize="Small" FontAttributes="Bold"  Padding="15,8,15,8" Margin="-3"></Label>
+        </StackLayout>
+
+        <Entry x:Name="emailEntry" HorizontalOptions="Center" WidthRequest="300" BackgroundColor="#77000000" PlaceholderColor="White" TextColor="White" 
+         Grid.Row="1"
+         Grid.Column="0"/>
+
+        <Entry x:Name="passwordEntry" HorizontalOptions="Center" WidthRequest="300"  BackgroundColor="#77000000" PlaceholderColor="White" TextColor="White"  IsPassword="True"
+         Grid.Row="2"
+         Grid.Column="0"/>
+
+        <Entry x:Name="checkPasswordEntry" HorizontalOptions="Center" WidthRequest="300" BackgroundColor="#77000000" PlaceholderColor="White" TextColor="White" IsPassword="True"
+         Grid.Row="3"
+         Grid.Column="0"/>
+       
+        <Button x:Name="actionButton" HorizontalOptions="Center"  WidthRequest="100" BackgroundColor="#99000000" TextColor="White"
+         Grid.Row="4"
+         Grid.Column="0"/>
+
+
+        
+    </Grid>
+</ContentPage>

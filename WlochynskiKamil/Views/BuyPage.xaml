@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WlochynskiKamil.Views.BuyPage" BackgroundColor="#262626">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+            <ImageButton x:Name="back" Source="Images/back.png" Clicked="Back_Clicked" HeightRequest="30" Margin="10,0,70,0"></ImageButton>
+            <ImageButton Source="Images/logo.png" Clicked="Logo_Clicked" HeightRequest="30" Margin="0,0,70,0"></ImageButton>
+            <ImageButton Source="Images/cart.png" Clicked="Cart_Clicked" HeightRequest="30" Margin="0,0,70,0"></ImageButton>
+            <ImageButton Source="Images/logout.png" Clicked="Logout_Clicked" HeightRequest="30" Margin="0,0,10,0"></ImageButton>
+        </StackLayout>
+    </NavigationPage.TitleView>
+   
+
+    <Grid HorizontalOptions="Center" 
+      VerticalOptions="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label HorizontalOptions="Center"  WidthRequest="300" BackgroundColor="#77000000"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="koszty" TextColor="White" Grid.Row="0"
+         Grid.Column="0"></Label>
+        <Label HorizontalOptions="Center"  WidthRequest="300" BackgroundColor="#77000000"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" x:Name="dostawa" TextColor="White" Grid.Row="1"
+         Grid.Column="0"></Label>
+
+        <Entry Text="Imię" HorizontalOptions="Center" WidthRequest="300" BackgroundColor="#77000000" PlaceholderColor="White" TextColor="White" 
+         Grid.Row="2"
+         Grid.Column="0"/>
+
+        <Entry Text="Nazwisko" HorizontalOptions="Center" WidthRequest="300"  BackgroundColor="#77000000" PlaceholderColor="White" TextColor="White"
+         Grid.Row="3"
+         Grid.Column="0"/>
+
+        <Entry Text="Kraj" HorizontalOptions="Center" WidthRequest="300" BackgroundColor="#77000000" PlaceholderColor="White" TextColor="White"
+         Grid.Row="4"
+         Grid.Column="0"/>
+
+        <Entry Text="Miasto" HorizontalOptions="Center" WidthRequest="300" BackgroundColor="#77000000" PlaceholderColor="White" TextColor="White"
+         Grid.Row="5"
+         Grid.Column="0"/>
+
+        <Entry Text="Kod pocztowy" HorizontalOptions="Center" WidthRequest="300" BackgroundColor="#77000000" PlaceholderColor="White" TextColor="White"
+         Grid.Row="6"
+         Grid.Column="0"/>
+
+        <Entry Text="Adres" HorizontalOptions="Center" WidthRequest="300" BackgroundColor="#77000000" PlaceholderColor="White" TextColor="White"
+         Grid.Row="7"
+         Grid.Column="0"/>
+
+        <Button Clicked="Buy_Clicked" Text="Zamów" HorizontalOptions="Center"  WidthRequest="100" BackgroundColor="#99000000" TextColor="White"
+         Grid.Row="8"
+         Grid.Column="0"/>
+
+
+
+    </Grid>
+
+
+
+</ContentPage>
